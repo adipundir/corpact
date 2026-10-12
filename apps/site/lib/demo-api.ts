@@ -2,8 +2,8 @@
  * The hosted demo API used by the docs sandbox. The key is read-only (`assets:read`, `ledger:read`) and belongs
  * to its own tenant, so it can reach nothing but the wallet registered for the demo. It is public on purpose.
  */
-export const DEMO_API_URL = 'https://corpactapi-production.up.railway.app';
-export const DEMO_API_KEY = 'cpk_6mTym0MCpOrAqdAyKiW4Flrm0V8JGDuXIjcLCgy0Wzg';
+export const DEMO_API_URL = process.env.NEXT_PUBLIC_DEMO_API_URL ?? 'https://api-production-c0ce.up.railway.app';
+export const DEMO_API_KEY = process.env.NEXT_PUBLIC_DEMO_API_KEY ?? 'cpk_Vte-IwZREtqx8NBgRdOu9e8nJfTWot3nsRQ_Y5ioRRM';
 export const DEMO_WALLET = '6kn8Vj9YkvNLo8peW2fzebQdSLtX33A3TkRJwXqMCy1U';
 
 export interface DemoRequest {
